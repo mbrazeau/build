@@ -48,7 +48,7 @@ def cmakeBuildType(buildDebug):
         buildType = "Debug"
     return buildType
 
-def cmakeBuildLinux(buildDebug, buildVerbose, buildJobs):
+def cmakeBuildPosix(buildDebug, buildVerbose, buildJobs):
     cmake = "cmake .. -DCMAKE_BUILD_TYPE=" + cmakeBuildType(buildDebug)
     make = "make -j " + buildJobs + " install"
     if (buildVerbose == True):
@@ -88,10 +88,10 @@ def cmakeBuild(buildDebug, buildClean, buildVerbose, buildJobs):
     buildTarget = "build/"
     cleanTarget(buildTarget, buildClean)
     c = Chdir(buildTarget)
-    if (platform.system() == "Linux"):    
-        cmakeBuildLinux(buildDebug, buildVerbose, buildJobs)
-    else:
+    if (platform.system() == "Windows"):
         cmakeBuildWindows(buildDebug, buildVerbose, buildJobs)
+    else:
+        cmakeBuildPosix(buildDebug, buildVerbose, buildJobs)
 
 def usage():
     print("Build the morphy software suite")
