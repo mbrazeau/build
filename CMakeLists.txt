@@ -6,6 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmakemodules")
 # Find gsl, libedit, and ncl
 FIND_PACKAGE(Libedit REQUIRED)
 FIND_PACKAGE(Ncl REQUIRED)
+FIND_PACKAGE(R)
 
 # Crank up the warning levels
 if(MSVC)
