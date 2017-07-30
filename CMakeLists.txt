@@ -25,4 +25,5 @@ set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../install")
 add_subdirectory (${CMAKE_SOURCE_DIR}/../pcl ${CMAKE_CURRENT_BINARY_DIR}/pcl)
 add_subdirectory (${CMAKE_SOURCE_DIR}/../morphylib ${CMAKE_CURRENT_BINARY_DIR}/morphyLib)
 add_subdirectory (${CMAKE_SOURCE_DIR}/../PAWM ${CMAKE_CURRENT_BINARY_DIR}/PAWM)
+add_subdirectory (${CMAKE_SOURCE_DIR}/../nui ${CMAKE_CURRENT_BINARY_DIR}/nui)
 
