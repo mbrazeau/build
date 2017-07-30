@@ -19,6 +19,13 @@ if(MSVC)
 elseif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
   # Update if necessary
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+  if(COVERAGE)
+      message(STATUS "coverage enabled")
+      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+      set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage")
+  else()
+      message(STATUS "coverage disabled")
+  endif()
 endif()
 
 set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../install")
