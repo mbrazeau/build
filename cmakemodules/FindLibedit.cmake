@@ -1,5 +1,6 @@
 set(EDIT_INC_FILE "histedit.h")
 set(EDIT_LIB_FILE "libedit.a")
+set(BSD_LIB_FILE "libbsd.so")
 
 find_path(PATH_INC_EDIT NAMES ${EDIT_INC_FILE} PATHS env PATH_INC_EDIT)
 
@@ -15,10 +16,14 @@ if( NOT PATH_INC_EDIT )
 endif()
 
 find_library(PATH_LIB_EDIT NAMES ${EDIT_LIB_FILE} PATHS ENV PATH_LIB_EDIT)
+find_library(PATH_LIB_BSD NAMES ${BSD_LIB_FILE} PATHS ENV PATH_LIB_EDIT)
 
 if( NOT PATH_LIB_EDIT )
     editerr(${EDIT_LIB_FILE} "PATH_LIB_EDIT")
 endif()
 
+if(PATH_LIB_BSD)
+    set(PATH_LIB_EDIT ${PATH_LIB_EDIT} ${PATH_LIB_BSD})
+endif()
 message(STATUS "PATH_INC_EDIT = \"${PATH_INC_EDIT}\"")
 message(STATUS "PATH_LIB_EDIT = \"${PATH_LIB_EDIT}\"")
