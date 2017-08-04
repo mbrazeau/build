@@ -1,5 +1,5 @@
 set(EDIT_INC_FILE "histedit.h")
-set(EDIT_LIB_FILE "libedit.a")
+set(EDIT_LIB_FILE "libedit.so")
 set(BSD_LIB_FILE "libbsd.so")
 
 find_path(PATH_INC_EDIT NAMES ${EDIT_INC_FILE} PATHS env PATH_INC_EDIT)
