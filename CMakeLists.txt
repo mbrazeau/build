@@ -4,7 +4,9 @@ project (morphy)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmakemodules")
 
 # Find gsl, libedit, and ncl
+if (NOT MSVC)
 FIND_PACKAGE(Libedit REQUIRED)
+endif()
 FIND_PACKAGE(Ncl REQUIRED)
 FIND_PACKAGE(R)
 
