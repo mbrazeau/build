@@ -1,5 +1,5 @@
 set(NCL_INC_FILE "ncl/ncl.h")
-set(NCL_LIB_FILE "ncl/libncl.a")
+set(NCL_LIB_FILE "ncl/${CMAKE_STATIC_LIBRARY_PREFIX}ncl${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
 find_path(PATH_INC_NCL NAMES ${NCL_INC_FILE} PATHS "${CMAKE_SOURCE_DIR}/../install/include" env PATH_INC_NCL)
 
