@@ -70,6 +70,8 @@ def cmakeBuildWindows(buildDebug, buildVerbose, buildJobs):
             gen = "Visual Studio 12 2013"
         elif (msvsVer == "14"):
             gen = "Visual Studio 14 2015"
+        elif (msvsVer == "15"):
+            gen = "Visual Studio 15 2017"
         cmake = "cmake .. -G"
         make = "cmake --build . --target install --config " + cmakeBuildType(buildDebug)
         cmake = cmake.split(" ")
