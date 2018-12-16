@@ -129,11 +129,13 @@ def main(argv):
             usage()
         if (opt in ('-d', '--debug')):
             buildDebug = True
+            buildCoverage = False
         if (opt in ('--coverage')):
             buildCoverage = True
             buildDebug = True
         if (opt in ('-r', '--release')):
-            pass
+            #pass
+            buildCoverage = False
         if (opt in ('-c', '--clean')):
             buildClean = True
         if (opt in ('-v', '--verbose')):
