@@ -19,13 +19,13 @@ install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
   - git clone -b dev https://github.com/mbrazeau/nui.git
   - git clone  https://github.com/mbrazeau/build.git
-  - git clone https://github.com/cdesjardins/ncl.git
+  - git clone https://github.com/cdesjardins/ncl_mtholder.git
+  - mkdir ncl 
+  - mv ncl_mtholder ncl
   - cd ncl
-  - sh bootstrap.sh
   - mkdir build
   - cd build
-  - ../configure
-  - make -j4
+  - cmake ..
   - make
   - make install
   - cd ${TRAVIS_BUILD_DIR}
