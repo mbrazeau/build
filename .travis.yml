@@ -12,6 +12,11 @@ install:
   - git clone -b dev https://github.com/mbrazeau/nui.git
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
+  - cd ncl
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make install
   - mkdir external
   - cd external
   - git clone https://github.com/cdesjardins/wineditline.git
