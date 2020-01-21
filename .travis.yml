@@ -2,14 +2,10 @@ language:
   - c
   - cxx
 
-matrix:
-    include:
-#        - os: windows
-        - os: osx
-            addons:
-                homebrew:
-                    packages:
-                        - libedit
+os: 
+#  - windows
+  - osx
+
 install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
   - git clone -b dev https://github.com/mbrazeau/nui.git
@@ -26,6 +22,7 @@ install:
   - mkdir external
   - cd external
   - git clone https://github.com/cdesjardins/wineditline.git
+  - locate libedit.pc
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
