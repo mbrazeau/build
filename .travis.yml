@@ -11,10 +11,7 @@ matrix:
                 - libedit
           env:
             - PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
-            - SHELL=bash
         - os: windows
-          env:
-            - SHELL=sh
 
 
 install:
@@ -24,7 +21,7 @@ install:
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
   - cd ncl
-  - $SHELL bootstrap.sh
+  - if [["$TRAVIS:OS:NAME"=="windows]];then powershell bootstrap.sh; else bash bootstrap.sh; fi
   - mkdir build
   - cd build
   - ../configure
