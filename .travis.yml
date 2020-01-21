@@ -3,8 +3,13 @@ language:
   - cxx
 
 os: 
-#  - windows
+  - windows
   - osx
+
+addons:
+    apt:
+        packges:
+            - libedit
 
 install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
