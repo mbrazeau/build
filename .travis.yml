@@ -16,7 +16,7 @@ install:
   - bash bootstrap.sh
   - mkdir build
   - cd build
-  - ../v2.1/configure
+  - ../configure
   - make
   - make install
   - cd ${TRAVIS_BUILD_DIR}
