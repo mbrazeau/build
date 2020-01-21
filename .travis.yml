@@ -21,6 +21,7 @@ install:
   - mkdir build
   - cd build
   - ../configure
+  - make -j4
   - make
   - make install
   - cd ${TRAVIS_BUILD_DIR}
