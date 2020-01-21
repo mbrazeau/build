@@ -21,7 +21,7 @@ install:
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
   - cd ncl
-  - if [["$TRAVIS:OS:NAME"=="windows]];then powershell bootstrap.sh; else bash bootstrap.sh; fi
+  - if [["$TRAVIS:OS:NAME"=="windows"]];then powershell bootstrap.sh; else bash bootstrap.sh; fi
   - mkdir build
   - cd build
   - ../configure
