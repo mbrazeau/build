@@ -35,8 +35,8 @@ install:
 script:
   - cd ${TRAVIS_BUILD_DIR}
   - ls
-  - mkdir build
   - cd build
+  - mkdir build
   - cmake .
   - make
   - cd build
