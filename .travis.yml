@@ -41,6 +41,8 @@ script:
   - make
   - ls
   - pwd
+  - cd nui
+  - ./nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
