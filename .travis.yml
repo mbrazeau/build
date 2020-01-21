@@ -1,6 +1,6 @@
 language: 
   - c
-  - cpp
+  - cxx
 
 os: 
   - windows
