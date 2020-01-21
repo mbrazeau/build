@@ -14,7 +14,6 @@ matrix:
 
         - os: windows
 
-
 install:
   - cd ${TRAVIS_BUILD_DIR}
   - git clone -b development https://github.com/mbrazeau/mpl.git
@@ -40,7 +39,7 @@ script:
   - mkdir build
   - cmake .
   - make
-  - cat run.txt | .nui/nui
+  - cat run.txt | ./build/nui/nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
