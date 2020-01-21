@@ -13,8 +13,6 @@ matrix:
             - PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
 
         - os: windows
-          env:
-            - MAKE=mingw32-make
 
 install:
   - cd ${TRAVIS_BUILD_DIR}
@@ -42,7 +40,7 @@ script:
   - pwd
   - ls .
   - ls ..
-  - cat run.txt | ./nui/nui
+  - cat ../run.txt | ./nui/nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
