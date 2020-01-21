@@ -35,6 +35,8 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - ls
   - cd build
+    mkdir build
+    cd build
   - cmake ..
   - cmake --build .
   - pwd
