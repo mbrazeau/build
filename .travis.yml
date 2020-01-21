@@ -38,7 +38,9 @@ script:
   - ls
   - cd build
   - mkdir build
-  - cmake .
+  - cd build
+  - cmake ..
+  - cmake --build
   - MAKE
   - pwd
   - ls .
