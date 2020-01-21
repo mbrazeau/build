@@ -39,11 +39,7 @@ script:
   - mkdir build
   - cmake .
   - make
-  - cd build
   - ls
-  - cd nui
-  - ls
-  - ./nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
