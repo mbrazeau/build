@@ -10,7 +10,12 @@ matrix:
               packges:
                 - libedit
           env:
-            - export PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
+            - PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
+            - SHELL=bash
+        - os: windows
+          env:
+            - SHELL=sh
+
 
 install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
@@ -18,7 +23,7 @@ install:
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
   - cd ncl
-  - bash bootstrap.sh
+  - ${SHELL} bootstrap.sh
   - mkdir build
   - cd build
   - ../configure
