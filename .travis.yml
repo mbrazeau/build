@@ -33,6 +33,7 @@ install:
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
+  - pwd
   - ls
   - cd build
     mkdir build
