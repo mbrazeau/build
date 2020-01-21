@@ -13,6 +13,8 @@ matrix:
             - PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
 
         - os: windows
+          env:
+            - export MAKE=mingw32-make
 
 install:
   - cd ${TRAVIS_BUILD_DIR}
