@@ -7,11 +7,13 @@ os:
   - osx
 
 install:
-  - - sudo apt-get --yes --assume-yes install repo
+  - mkdir ~/bin
+  - PATH=~/bin:$PATH
+  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  - repo init -u https://github.com/mbrazeau/morphyManifest.git
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
-  - repo init -u https://github.com/mbrazeau/morphyManifest
   - repo sync
   - mkdir build
   - cd build
