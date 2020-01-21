@@ -7,14 +7,16 @@ os:
   - osx
 
 install:
-  - mkdir ~/bin
-  - PATH=~/bin:$PATH
-  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-  - repo init -u https://github.com/mbrazeau/morphyManifest.git
+  - git clone -b development https://github.com/mbrazeau/mpl.git
+  - git clone -b dev https://github.com/mbrazeau/nui.git
+  - git clone  https://github.com/mbrazeau/build.git
+  - git clone https://github.com/cdesjardins/ncl.git
+  - mkdir external
+  - cd external
+  - git clone https://github.com/cdesjardins/wineditline.git
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
-  - repo sync
   - mkdir build
   - cd build
   - cmake ..
