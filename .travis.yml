@@ -11,7 +11,7 @@ matrix:
                 - libedit
           env:
             - PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
-        - os: windows
+              #        - os: windows
 
 
 install:
@@ -39,7 +39,10 @@ script:
   - cd build
   - cmake .
   - make
-  - ${TRAVIS_BUILD_DIR}/build/build/nui/nui < quit
+  - cd build
+  - ls
+  - cd nui
+  - ls
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
