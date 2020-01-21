@@ -14,7 +14,7 @@ matrix:
 
         - os: windows
           env:
-            - export MAKE=mingw32-make
+            - MAKE=mingw32-make
 
 install:
   - cd ${TRAVIS_BUILD_DIR}
