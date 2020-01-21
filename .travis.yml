@@ -39,7 +39,7 @@ script:
   - pwd
   - ls .
   - ls ..
-  - cat run.txt | ./build/nui/nui
+  - cat ../run.txt | ./nui/nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
