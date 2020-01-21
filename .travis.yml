@@ -40,7 +40,7 @@ script:
   - cd build
   - cmake .
   - make
-  - ./tests/nui
+  - ${TRAVIS_BUILD_DIR}/build/build/nui/nui < quit
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
