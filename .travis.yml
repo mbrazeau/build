@@ -7,16 +7,11 @@ os:
   - osx
 
 install:
-  - mkdir ~/bin
-  - PATH=~/bin:$PATH
-  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-  - chmod a+x ~/bin/repo
-  - cd ${TRAVIS_BUILD_DIR}
-  - repo init -u https://github.com/mbrazeau/morphyManifest
-  - repo sync
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
+  - repo init -u https://github.com/mbrazeau/morphyManifest
+  - repo sync
   - mkdir build
   - cd build
   - cmake ..
