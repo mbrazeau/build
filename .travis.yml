@@ -13,7 +13,7 @@ install:
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
   - cd ncl
-  - sh bootstrap.sh
+  - bash bootstrap.sh
   - mkdir build
   - cd build
   - ../v2.1/configure
