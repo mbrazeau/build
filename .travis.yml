@@ -2,14 +2,13 @@ language:
   - c
   - cxx
 
-os: 
-  - windows
-  - osx
-
-addons:
-    apt:
-        packges:
-            - libedit
+matrix:
+    include:
+        - os: osx
+          addons:
+            homebrew:
+              packges:
+                - libedit
 
 install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
