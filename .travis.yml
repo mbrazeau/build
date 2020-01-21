@@ -18,6 +18,7 @@ matrix:
 
 
 install:
+  - cd ${TRAVIS_BUILD_DIR}
   - git clone -b development https://github.com/mbrazeau/mpl.git
   - git clone -b dev https://github.com/mbrazeau/nui.git
   - git clone  https://github.com/mbrazeau/build.git
