@@ -42,7 +42,7 @@ script:
   - ls
   - pwd
   - cd nui
-  - ./nui
+  - ./nui < quit
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
