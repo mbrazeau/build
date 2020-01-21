@@ -41,6 +41,9 @@ script:
   - mkdir build
   - cmake .
   - MAKE
+  - pwd
+  - ls .
+  - ls ..
   - cat run.txt | ./build/nui/nui
 
 after_success:
