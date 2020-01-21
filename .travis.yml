@@ -15,10 +15,9 @@ matrix:
         - os: windows
 
 install:
-  - cd ${TRAVIS_BUILD_DIR}
+  - cd ..
   - git clone -b development https://github.com/mbrazeau/mpl.git
   - git clone -b dev https://github.com/mbrazeau/nui.git
-  - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl_mtholder.git
   - mv ncl_mtholder ./ncl
   - cd ncl
@@ -26,16 +25,13 @@ install:
   - cd build
   - cmake ..
   - cmake --build . --target install
-  - cd ${TRAVIS_BUILD_DIR}
+  - cd ${TRAVIS_BUILD_DIR}/..
   - mkdir external
   - cd external
   - git clone https://github.com/cdesjardins/wineditline.git
 
 script:
   - cd ${TRAVIS_BUILD_DIR}
-  - pwd
-  - ls
-  - cd build
     mkdir build
     cd build
   - cmake ..
@@ -43,7 +39,7 @@ script:
   - pwd
   - ls .
   - ls ..
-  - cat run.txt | ../nui/nui
+  - cat run.txt | ./build/nui/nui
 
 after_success:
   - cd ${TRAVIS_BUILD_DIR}
