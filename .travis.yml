@@ -2,12 +2,15 @@ language:
   - c
   - cxx
 
-os: 
-  - windows
-  - osx
-
+matrix:
+    include:
+#        - os: windows
+        - os: osx
+            addons:
+                homebrew:
+                    packages:
+                        - libedit
 install:
-  - 
   - git clone -b development https://github.com/mbrazeau/mpl.git
   - git clone -b dev https://github.com/mbrazeau/nui.git
   - git clone  https://github.com/mbrazeau/build.git
