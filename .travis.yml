@@ -24,7 +24,7 @@ install:
   - git clone  https://github.com/mbrazeau/build.git
   - git clone https://github.com/cdesjardins/ncl.git
   - cd ncl
-  - ${SHELL} bootstrap.sh
+  - $SHELL bootstrap.sh
   - mkdir build
   - cd build
   - ../configure
