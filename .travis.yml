@@ -9,6 +9,8 @@ matrix:
             homebrew:
               packges:
                 - libedit
+          env:
+            - export PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig"
 
 install:
   - git clone -b development https://github.com/mbrazeau/mpl.git
