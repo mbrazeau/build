@@ -24,7 +24,7 @@ matrix:
             - cd ${TRAVIS_BUILD_DIR}
             - mkdir build
             - cd build
-            - cmake -G "Visual Studio 16 2019" ..
+            - cmake -G "Visual Studio 15 2017" ..
             - cmake --build .
             - cat ../run.txt | ./nui/nui
 install:
