@@ -23,7 +23,10 @@ matrix:
           script:
             - cd ${TRAVIS_BUILD_DIR}
             - mkdir build
+            - ls .
+            - ls ..
             - cd build
+            - ls ..
             - cmake -G "Visual Studio 15 2017" ..
             - cmake --build .
             - cat ../run.txt | ./nui/nui
