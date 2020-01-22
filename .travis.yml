@@ -22,9 +22,8 @@ matrix:
         - os: windows
           script:
             - cd ${TRAVIS_BUILD_DIR}
+            - python build.py
             - mkdir build
-            - ls .
-            - ls ..
             - cd build
             - ls ..
             - cmake -G "Visual Studio 15 2017" ..
