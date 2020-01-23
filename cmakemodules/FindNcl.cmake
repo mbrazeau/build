@@ -16,9 +16,10 @@ endif()
 
 find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/../install/lib" env PATH_LIB_NCL)
 
-# Attempt to see if it has been built in the project directory
+# Attempt to see if it has been built in the project directory at another location
+# This could address the problem with Windows builds as they don't have unix-like directories
 if( NOT PATH_LIB_NCL )
-    find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/ncl" env PATH_LIB_NCL)
+    find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/../ncl" env PATH_LIB_NCL)
 endif()
 
 if( NOT PATH_LIB_NCL )
