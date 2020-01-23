@@ -25,7 +25,7 @@ find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/../in
 # This could address the problem with Windows builds as they don't have unix-like directories
 if( NOT PATH_LIB_NCL )
     set(NCL_LIB_FILE "ncl/build/ncl${CMAKE_STATIC_LIBRARY_PREFIX}ncl${CMAKE_STATIC_LIBRARY_SUFFIX}")
-    find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/../ncl/build/ncl" env PATH_LIB_NCL)
+    find_library(PATH_LIB_NCL NAMES ${NCL_LIB_FILE} PATHS "${CMAKE_SOURCE_DIR}/../ncl/build/" env PATH_LIB_NCL)
 endif()
 
 if( NOT PATH_LIB_NCL )
