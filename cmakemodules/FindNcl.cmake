@@ -10,6 +10,11 @@ macro(nclerr filename envvar)
     "env variable '${envvar}' to the location of '${filename}'")
 endmacro()
 
+# Attempt to find path to the NCL header file on an ad hoc ncl build in the main project directory
+if( NOT PATH_INC_NCL )
+    find_path(PATH_INC_NCL NAMES ${NCL_INC_FILE} PATHS "${CMAKE_SOURCE_DIR}/../ncl" env PATH_INC_NCL)
+endif()
+
 if( NOT PATH_INC_NCL )
     nclerr(${NCL_INC_FILE} "PATH_INC_NCL")
 endif()
